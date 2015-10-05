@@ -81,53 +81,57 @@ main p{
 	left: 10px;
 	z-index: 1;
 }
-ul , ol{
-list-style-type: none;
-padding-left: 0;
-width: 1000px;
-/*border: 1px solid #000000;*/
-
-height: 30px;
-
-}/*黒点や順番を消す 他　sircle squareなどあり--*/
-
+ul {
+	width: 80%;
+	display:table;
+	table-layout: fixed;
+	height: 50px;
+	margin: 10px auto;
+	padding: 0;
+	/*border: 1px solid #000000;*/
+}
+ul li{
+	background-color: #aaa;
+	display: table-cell;
+	color: :#ffffff;
+	text-align: center;
+	padding: 10px 0;
+	border-right: 1px solid #ff0000;
+}
+/*黒点や順番を消す 他　sircle squareなどあり--*/
+ul li:last-child {
+border-right: none;
+}
 
 /*li{
 	border-top: 1px solid #666666;
 }*/
 ol {
-	clear: left;
-}
-
-ul li , ol li{
-	float: left;
-	background: #aabbcc;
-	/*margin-top: 0#;
-	margin-bottom: 10px;
-	margin-left: 0;
-	padding-left: 0;
+	width: 80%;
+/*	background: #0000ff;*/
+	display:table;
 	height: 30px;
-	background-color: #fefefe;
-	border-radius: 5px;
-	background: linear-gradient(#777777 0%,#444444 50%,#333333 51%,#555555 100%);
-	*/
+	margin: 7px auto;
+	padding: 0;
+}
+
+ol li{
+	background-color: #ff0000;
+	display:table-cell;
 	text-align: center;
-	margin-left: 20px;
+	margin: 0;
+	border-right: 1px solid #aaa;
 
 }
-ul li {
-	width: 230px;
+ol li:last-child{
+	border-right: none;
 }
-ol li {
-	width: 180px;
+a{
+	color: #ffff00;
 }
-
-/*
-.class{
-	float: none;
-	background: linear-gradient();
-}*/
-
-table{
-	clear: left;
+a hover{
+	color: #00ffff;
+}
+a:visited{
+	color: #888888;
 }
