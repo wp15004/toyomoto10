@@ -148,7 +148,7 @@ th{
 	font-size: 20px;
 	text-align: center;
 }
-th , td{
+.33 th , .33 td{
 	text-align: center;
 	border:1px solid #666666;
 }
@@ -169,10 +169,21 @@ a{
 	text-decoration: none;
 }
 form{
-width: 80%;
 background: #efefef;
 margin: 20px auto;
 }
-textarea{
-	background: #222222;
+
+/*input[type="text"]{
+
+}*/
+.makura p{
+line-height: 2em;
+}
+.22{
+	margin-top: 30px;
+	text-align: left;
+}
+
+.22 td , .22 th{
+	
 }
