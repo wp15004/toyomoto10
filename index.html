@@ -87,7 +87,7 @@
 
 				</ul>
 <!-- <div class="clear class" ></div> -->
-<ol>
+<ol >
 					<li>材料を切る</li>
 					<li>豚肉を炒める</li>
 					<li>野菜を炒める</li>
@@ -96,33 +96,117 @@
 					
 				</ol>
 				<div class="clear" ></div>
-				<table>
-					<tbody>	<tr>
-						<th>国語</th>
-						<th>算数</th>
-						<th>理科</th>
-						<th>社会</th>
-					</tr>
+				<table cellspacing="0" cellpadding="10"><!-- <table border="1"//テーブルの決まった書式> -->
+				<caption>テストの成績表</caption>
+					<thead>
 					<tr>
-						<td colspan="2">20点</td><!--横に二つセルを使う-->
+						<th></th>
+						<th scope="col">国語</th>
+						<th scope="col">算数</th>
+						<th scope="col">理科</th>
+						<th scope="col">社会</th>
+					</tr>
+					</thead>
+					<tbody>
+					<tr>
+					<th scope="row">篠原</th>
+					<td>10点</td>
+					<td>20点</td>
+						<!-- <td colspan="2">20点</td> --><!--横に二つセルを使う-->
 						<td>30点</td>
-						<td rowspan="2">40点</td><!--縦に二つセルを使う-->
+						<td>40点</td>
+						<!-- <td rowspan="2">40点</td> --><!--縦に二つセルを使う-->
 					</tr>
-					<tr>
+					<!-- <tr class="tr"> -->
+						<th scope="row">松田</th>
 						<td>50点</td>
 						<td>60点</td>
 						<td>70点</td>
-
+						<td>80点</td>
 					</tr>
+					<tr>
+						<th scope="row">牛田</th>
+						<td>50点</td>
+						<td>60点</td>
+						<td>70点</td>
+						<td>80点</td>
+					</tr>
+					<!-- <tr class="tr"> -->
+						<th scope="row">桃井</th>
+						<td>50点</td>
+						<td>60点</td>
+						<td>70点</td>
+						<td>80点</td>
+					</tr>
+					<tr>
+						<th scope="row">目黒</th>
+						<td>50点</td>
+						<td>60点</td>
+						<td>70点</td>
+						<td>80点</td>
+					</tr>
+					<!-- <tr class="tr"> -->
+						<th scope="row">沢井</th>
+						<td>50点</td>
+						<td>60点</td>
+						<td>70点</td>
+						<td>80点</td>
+					</tr>
+					<tr>
+						<th scope="row">山本</th>
+						<td>50点</td>
+						<td>60点</td>
+						<td>70点</td>
+						<td>80点</td>
+					</tr>
+					<!-- <tr class="tr"> -->
+						<th scope="row">戸塚</th>
+						<td>50点</td>
+						<td>60点</td>
+						<td>70点</td>
+						<td>80点</td>
+					</tr>
+					<tr>
+						<th scope="row">永井</th>
+						<td>50点</td>
+						<td>60点</td>
+						<td>70点</td>
+						<td>80点</td>
+					</tr>
+					<!-- <tr class="tr"> -->
+						<th scope="row">高原</th>
+						<td>50点</td>
+						<td>60点</td>
+						<td>70点</td>
+						<td>80点</td>
+					</tr>
+
 				</tbody>
 			</table>
-			<form action="form.html" method="get"><!--ボタンを押す--><!--と、値をひろう-->
-				<p>氏名<input type="text" name="namae"><!--上記に付随してインプットされた情報（名前）を-->
+			<table>
+			<form action="form.html" method="post"><!--ボタンを押す--><!--と、値をひろう-->
+				<p>氏名:
+				<input type="text" name="namae" required><!--上記に付随してインプットされた情報（名前）を--><br>
+				電話番号:
+				<input type="text" name="phone" pattern="^[0-9]+"><br>
+				<!-- あ〇〇:<input type="text" name="amarumaru" pattern="^あ........$"> -->
+
 				</p><!--ラジオボタン(1つのみ選択)-->
-				<p>性別<input type="radio" name="seibetu" value="m">男性<!--上記に付随してインプットされた情報（性別（男性））を-->
+				<p>性別:<input type="radio" name="seibetu" value="m">男性<!--上記に付随してインプットされた情報（性別（男性））を-->
 					<input type="radio" name="seibetu" value="f">女性<!--	上記に付随してインプットされた情報（性別（女性））を-->
 					<input type="radio" name="seibetu" value="mf">中性<!--	上記に付随してインプットされた情報（性別（女性））を-->
-					<input type="radio" name="seibetu" value="00">老人<!--	上記に付随してインプットされた情報（性別（女性））を-->
+					<!-- <input type="radio" name="seibetu" value="00">老人 --><!--	上記に付随してインプットされた情報（性別（女性））を-->
+				</p>
+				<p>
+				出身地:
+				<input type="radio" name="division" value="hokkaido" checked>北海道
+<input type="radio" name="division" value="tohoku">東北
+<input type="radio" name="division" value="kantokoshietu">関東甲信越
+<input type="radio" name="division" value="tokai">東海
+<input type="radio" name="division" value="kansai">関西
+<input type="radio" name="division" value="chugoku">中国
+<input type="radio" name="division" value="shikoku">四国
+<input type="radio" name="division" value="kyushuokinawa">九州沖縄
 				</p>
 				<p><!--チェックボックス(複数選択可能)-->
 					好きな料理はなんですか？:<br>
@@ -131,11 +215,25 @@
 					<input type="checkbox" name="menu" value="france" checked="checkd">フレンチ<br>
 					<input type="checkbox" name="menu" value="italy" checked="checkd">イタリアン<br>
 				</p>
+				<select name="select-seibetu">
+				<option value="m">男性</option>
+				<option value="f">女性</option>
+				<option value="mf">その他</option>
+				</select>
 				<p>
-					<input type="submit" neme="botan" value="送信する">
+				コメントをお書きください<br>
+				<textarea name="comment" cols="50" rows="5">
+ご自由にお書きください
+				</textarea>
+				</p>
+				<p>
+				<!-- <botton type="reset">リセットする</botton> -->
+				<input type="reset" value="リセットする">
+					<input type="submit" neme="botan" value="送信する！">
 				</p>
 			</form>
 			<a><img src="C:\Users\kimiko.z\Desktop\狭くない８畳ワンルーム.jpg" height="150" width="300" alt=""></a>
+			</table>
 		</main>
 		<footer>
 			沖縄県那覇市泉崎１－１－１ 502

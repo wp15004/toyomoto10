@@ -108,10 +108,10 @@ border-right: none;
 }*/
 ol {
 	width: 80%;
-/*	background: #0000ff;*/
 	display:table;
-	height: 30px;
-	margin: 7px auto;
+	table-layout: fixed;
+	height: 50px;
+	margin: 10px auto;
 	padding: 0;
 }
 
@@ -129,9 +129,50 @@ ol li:last-child{
 a{
 	color: #ffff00;
 }
-a hover{
+a:hover{
 	color: #00ffff;
 }
 a:visited{
 	color: #888888;
+	font-size: 50px;
+}
+table{
+	border: 1px solid #222222;
+	width:80%;
+	margin: auto;
+}
+th{
+	background: #996375;
+	bo
+	font-weight: normal;
+	font-size: 20px;
+	text-align: center;
+}
+th , td{
+	text-align: center;
+	border:1px solid #666666;
+}
+
+tr:nth-child(odd){
+/*tr:nth-child(2n-1){*/
+	background: #623462;
+}
+.tr{
+background-color: #888888;
+}
+caption{
+	font-weight: bold;
+	font-size: 24px;
+	text-decoration: underline;
+}
+a{
+	text-decoration: none;
+}
+form{
+width: 80%;
+background: #efefef;
+margin: 20px auto;
+}
+textarea{
+	background: #222222;
 }
